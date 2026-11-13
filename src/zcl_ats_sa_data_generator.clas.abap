@@ -187,7 +187,7 @@ CLASS zcl_ats_sa_data_generator IMPLEMENTATION.
                     category = 'PCs'
                     price = 15500
                     currency = 'INR'
-                    discount = 8
+                    discount = 9
                     )
                     to lt_prod.
 
