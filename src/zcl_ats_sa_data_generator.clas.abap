@@ -37,7 +37,9 @@ ENDCLASS.
 
 
 
-CLASS zcl_ats_sa_data_generator IMPLEMENTATION.
+CLASS ZCL_ATS_SA_DATA_GENERATOR IMPLEMENTATION.
+
+
   METHOD if_oo_adt_classrun~main.
     flush( ).
     fill_master_data( ).
@@ -50,6 +52,7 @@ CLASS zcl_ats_sa_data_generator IMPLEMENTATION.
 *        output =
     ).
   ENDMETHOD.
+
 
   METHOD fill_master_data.
     data : lt_bp type table of zats_sa_bpa,
@@ -195,6 +198,7 @@ CLASS zcl_ats_sa_data_generator IMPLEMENTATION.
      insert zats_sa_product from table @lt_prod.
   ENDMETHOD.
 
+
   METHOD fill_transaction_data.
     data : o_rand type REF TO cl_abap_random_int,
            n type i,
@@ -252,6 +256,7 @@ CLASS zcl_ats_sa_data_generator IMPLEMENTATION.
     insert zats_sa_so_item from table @lt_so_i.
 
   ENDMETHOD.
+
 
   METHOD flush.
     delete from : zats_sa_bpa, zats_sa_product, zats_sa_so_hdr, zats_sa_so_item.
